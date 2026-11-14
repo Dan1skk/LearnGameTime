@@ -22,4 +22,5 @@ object UiKitColor {
             Color(0xFFFF6480), Color(0xFFF22E63)
         )
     )
+    val redMain = Color(0xFFF22E63)
 }

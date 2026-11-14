@@ -39,9 +39,3 @@ fun UiKitButton(
         )
     }
 }
-
-@Preview(showBackground = true)
-@Composable
-fun prevew() {
-    UiKitButton({}, "Let’s Combat!")
-}
