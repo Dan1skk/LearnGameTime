@@ -19,11 +19,12 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun UiKitButton(
     onClick: () -> Unit,
-    name: String
+    name: String,
+    modifier: Modifier = Modifier
 ) {
     TextButton(
         onClick = onClick,
-        modifier = Modifier
+        modifier = modifier
             .size(width = 224.dp, height = 58.dp)
             .background(
                 UiKitColor.redGradientMain,

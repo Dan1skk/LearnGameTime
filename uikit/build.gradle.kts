@@ -35,4 +35,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.ui.tooling)
+
+    implementation("com.tbuonomo:dotsindicator:5.1.2")
+
 }
