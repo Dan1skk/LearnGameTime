@@ -36,11 +36,8 @@ android {
 afterEvaluate {
     publishing {
         publications {
-            register<MavenPublication>("release") {
+            create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.Dan1skk"
-                artifactId = "uikit"
-                version = "0.2"
             }
         }
     }
