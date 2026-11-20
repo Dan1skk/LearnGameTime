@@ -1,9 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     id("org.jetbrains.kotlin.plugin.compose")
-
-    // THERE
-    id("maven-publish")
 }
 
 android {
@@ -33,8 +30,11 @@ android {
 
 
 // THERE
+
+apply(plugin = "maven-publish")
+
 afterEvaluate {
-    publishing {
+    extensions.configure<PublishingExtension>{
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
