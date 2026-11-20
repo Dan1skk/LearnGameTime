@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     id("org.jetbrains.kotlin.plugin.compose")
+
+    // THERE
+    `maven-publish`
 }
 
 android {
@@ -20,6 +23,27 @@ android {
     }
 
 
+    // THERE
+    publishing {
+        singleVariant("release")
+    }
+
+
+}
+
+
+// THERE
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.Dan1skk"
+                artifactId = "uikit"
+                version = "0.2"
+            }
+        }
+    }
 }
 
 dependencies {
@@ -35,7 +59,4 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.ui.tooling)
-
-    implementation("com.tbuonomo:dotsindicator:5.1.2")
-
 }
