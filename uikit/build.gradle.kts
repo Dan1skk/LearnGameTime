@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 
     // THERE
-    `maven-publish`
+    id("maven-publish")
 }
 
 android {
